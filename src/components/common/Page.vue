@@ -1,11 +1,16 @@
 <template>
-    <Container :classes="`page flex flex-col items-center gap-[40px] phone-big:gap-30 justify-center relative`">
+    <Container :classes="classes">
         <slot />
     </Container>
 </template>
 
 <script setup>
     import Container from '../common/Container.vue'
+    import { defineProps } from 'vue';
+
+    const props = defineProps({
+        classes: { type: String, required: true, default: '' },
+    });
 </script>
   
 

@@ -1,5 +1,5 @@
 <template>
-    <Page>
+    <Page :classes="`page flex flex-col items-center gap-[40px] phone-big:gap-30 justify-center relative`">
         <Nav />
         <Main />
     </Page>

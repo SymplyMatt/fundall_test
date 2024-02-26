@@ -1,5 +1,6 @@
 <template>
     <Container :classes="classes">
+        <slot />
         {{ text }}
     </Container>
 </template>
