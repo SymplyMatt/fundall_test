@@ -26,33 +26,10 @@ module.exports = {
         '28': '28px',
       },
       colors: {
-        darkBrown: '#79242F',
-        lightBlack: '#646668',
-        headerBlack: '#848688',
-        navTitle: '#A4A6A8',
-        greyBorder : '#EEF0F1',
-        textColorDark : '#4E4E4E',
-        brightRed : "#C94A5A",
-        lightGreen : "#E4F7F5",
-        blackName : "#4F4F4F",
-        tableEven : "#F9FAFB",
-        payout : '#79242F',
-        collection : '#0B3C35',
-        failed : '#FFE5E9',
-        failedText : '#79242F',
-        greenRound : '#188475',
-        greyRound : '#D4D6D8',
-        orangeRound : '#EB8B1E',
-        greyBtn : '#F9FAFB',
-        darkModeColorLight : '#192734', 
-        darkModeColorThick : '#15202B', 
-        liveModeToggleDark : '#17a2b8',
-        sideBarDark : '#111921',
-        textGreyDark : '#959da5'
+        
       },
       textColor: {
-        'liveGreen': '#0D4840', 
-        'thickGreen': '#188475', 
+         
       },
       spacing: {
         'thin': '1px',
@@ -78,14 +55,7 @@ module.exports = {
         '180': '180px',
         '50': '200px',
         '100': '400px',
-        'greyBtnWidth': '230px',
-      }, 
-      minHeight: {
-        '70': '70px',
-      }, 
-      height: {
-        '80': '80px',
-      }, 
+      },  
     },
   },
   plugins: [],
