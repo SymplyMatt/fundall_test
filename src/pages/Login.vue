@@ -1,3 +1,9 @@
 <template>
-    <div class="">Login page</div>
+    <div class="page">
+        
+    </div>
 </template>
+
+<style>
+    
+</style>

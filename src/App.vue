@@ -1,3 +1,24 @@
 <template>
   <router-view/>
 </template>
+
+<style>
+  body{
+    background: hsl(228, 22%, 95%);
+    height: 100vh;
+    padding: 30px;
+  }
+  #app{
+    height: 100%;
+  }
+  .page{
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    border: 10px solid #FFFFFF;
+    border-radius: 40px;
+    height: 100%;
+    width: 100%;
+    background: #FCFBFC;
+  }
+</style>
