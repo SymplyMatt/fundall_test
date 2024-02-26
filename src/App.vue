@@ -7,6 +7,7 @@
     background: hsl(228, 22%, 95%);
     height: 100vh;
     padding: 30px;
+    font-family: "Circular Std", system-ui;
   }
   #app{
     height: 100%;
@@ -20,5 +21,6 @@
     height: 100%;
     width: 100%;
     background: #FCFBFC;
+    padding: 20px;
   }
 </style>
