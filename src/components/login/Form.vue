@@ -6,24 +6,24 @@
                     <Container :classes="`w-full flex gap-20`">
                         <Container :classes="`w-full flex flex-col gap-5`">
                             <Text :text="`First Name`" :classes="`font-semibold text-[12px] lg:text-[14px]`"/>
-                            <input type="text" class="w-full border border-solid border-[#CAD0C9] h-[32px] lg:h-[38px] p-10 text-14" placeholder="First Name">
+                            <Input :placeholder="`First Name`"/>
                         </Container>
                         <Container :classes="`w-full flex flex-col gap-5`">
                             <Text :text="`Last Name`" :classes="`font-semibold text-[12px] lg:text-[14px]`"/>
-                            <input type="text" class="w-full border border-solid border-[#CAD0C9] h-[32px] lg:h-[38px] p-10 text-14" placeholder="Last Name">
+                            <Input :placeholder="`Last Name`"/>
                         </Container>
                     </Container>
                     <Container :classes="`w-full flex flex-col gap-5`">
                         <Text :text="`Email address`" :classes="`font-semibold text-[12px] lg:text-[14px]`"/>
-                        <input type="text" class="w-full border border-solid border-[#CAD0C9] h-[32px] lg:h-[38px] p-10 text-14" placeholder="Enter Email">
+                        <Input :placeholder="`Enter Email`"/>
                     </Container>
                     <Container :classes="`w-full flex flex-col gap-5`">
                         <Text :text="`Password`" :classes="`font-semibold text-[12px] lg:text-[14px]`"/>
-                        <input type="text" class="w-full border border-solid border-[#CAD0C9] h-[32px] lg:h-[38px] p-10 text-14" placeholder="Enter Password">
+                        <Input :placeholder="`Enter Password`"/>
                     </Container>
                     <Container :classes="`w-full flex flex-col gap-5`">
                         <Text :text="`Confirm Password`" :classes="`font-semibold text-[12px] lg:text-[14px]`"/>
-                        <input type="text" class="w-full border border-solid border-[#CAD0C9] h-[32px] lg:h-[38px] p-10 text-14" placeholder="Confirm Password">
+                        <Input :placeholder="`Confirm Password`"/>
                     </Container>
                 </Container>
                 <Button :text='`SIGN UP`' :classes="`flex justify-center items-center p-[8px] ex-sm-phone:p-10 bg-[#4CE895] h-[45px] font-bold`" />
@@ -39,4 +39,5 @@
     import Container from '../common/Container.vue'
     import Text from '../common/Text.vue'
     import Button from '../common/Button.vue'
+    import Input from '../common/Input.vue';
 </script>
