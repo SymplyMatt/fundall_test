@@ -1,5 +1,5 @@
 <template>
-    <Page :classes="`page box-shadow_ flex flex-col items-center gap-[40px] phone-big:gap-30 justify-center relative`">
+    <Page :classes="`page box-shadow_ flex flex-col items-center gap-[40px] phone-big:gap-30 justify-center relative h-screen`">
         <Nav />
         <Main />
     </Page>
