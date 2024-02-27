@@ -3,7 +3,7 @@
         <Container :classes="`col-span-1 w-55  w-full flex flex-col justify-between h-full gap-10`">
             <Container :classes="`w-full flex flex-col gap-10`">
                 <Container :classes="`h-full w-full flex flex-col gap-20`">
-                    <Container :classes="`w-full flex gap-20`">
+                    <Container :classes="`w-full flex flex-col sm-phone:flex-row gap-20`">
                         <Container :classes="`w-full flex flex-col gap-5`">
                             <Text :text="`First Name`" :classes="`font-semibold text-[12px] lg:text-[14px]`"/>
                             <Input :placeholder="`First Name`"/>
@@ -28,9 +28,11 @@
                 </Container>
                 <Button :text='`SIGN UP`' :classes="`flex justify-center items-center p-[8px] ex-sm-phone:p-10 bg-[#4CE895] h-[45px] font-bold`" />
             </Container>
-            <Text :text="`Login Here`" :classes="`font-semibold text-[12px] lg:text-[14px] text-[#4CE895] flex justify-center items-center`">
+            <Container :classes="`font-semibold text-[12px] lg:text-[14px] text-center`">
                 <span :class="`text-black font-normal`">Already have an account? &nbsp;</span>
-            </Text>
+                <span :class="`font-semibold text-[#4CE895] `">Login Here</span>
+            </Container>
+            
         </Container>
     </Container>
 </template>

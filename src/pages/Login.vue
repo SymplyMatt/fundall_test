@@ -1,7 +1,8 @@
 <template>
-    <Page :classes="`page box-shadow_ grid grid-cols-1 grid-rows-[90%,10%] items-center  justify-center h-full overflow-hidden`">
-        <Container :classes="`grid grid-cols-2 items-center justify-center px-20`">
-            <Container :classes="`col-span-1 w-45 relative flex flex-col items-center justify-center h-full`">
+    <Page :classes="`page box-shadow_ grid grid-cols-1 grid-rows-[90%,10%] items-center justify-center h-full overflow-hidden p-20 sm-tab:p-40 bigtab:p-0 gap-20 phone-big:gap-50 bigtab:gap-0`">
+
+        <Container :classes="`grid grid-cols-1 bigtab:grid-cols-2 items-center justify-center phone:px-20  bigtab:gap-0`">
+            <Container :classes="`col-span-1 w-45 relative flex flex-col items-center justify-center h-full py-60 bigtab:py-0`">
                 <Container :classes="`absolute top-10 left-0`">
                     <Logo />
                 </Container>
@@ -11,12 +12,17 @@
             </Container>
             <Form />
         </Container>
-        <Container :classes="`grid grid-cols-2 items-center justify-center`">
-            <Container :classes="``">
+
+
+
+        
+        <Container :classes="`grid grid-cols-1 bigtab:grid-cols-2 items-center justify-center`">
+            <Container :classes="`hidden bigtab:block`">
             </Container>
-            <Text :text="`Terms & Conditions and Privacy Policy`" :classes="`font-semibold text-[12px] lg:text-[14px] text-[#4CE895] flex justify-center items-center nunito`">
+            <Container :classes="`text-center  text-[12px] lg:text-[16px] text-[#4CE895]`">
                 <span :class="`text-black font-normal`">By clicking on Login, you agree to our &nbsp;</span>
-            </Text>
+                <span :class="`font-semibold`">Terms & Conditions and Privacy Policy</span>
+            </Container>
         </Container>
     </Page>
 </template>
