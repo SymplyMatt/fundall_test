@@ -30,7 +30,7 @@
             </Container>
             <Container :classes="`font-semibold text-[12px] lg:text-[14px] text-center`">
                 <span :class="`text-black font-normal`">Already have an account? &nbsp;</span>
-                <span :class="`font-semibold text-[#4CE895] `">Login Here</span>
+                <span :class="`font-semibold text-[#4CE895]  cursor-pointer`">Login Here</span>
             </Container>
             
         </Container>

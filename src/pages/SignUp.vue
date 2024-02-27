@@ -16,7 +16,7 @@
             </Container>
             <Container :classes="`text-center  text-[12px] lg:text-[16px] text-[#4CE895]`">
                 <span :class="`text-black font-normal`">By clicking on Login, you agree to our &nbsp;</span>
-                <span :class="`font-semibold`">Terms & Conditions and Privacy Policy</span>
+                <span :class="`font-semibold  cursor-pointer`">Terms & Conditions and Privacy Policy</span>
             </Container>
         </Container>
     </Page>

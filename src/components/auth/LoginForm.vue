@@ -21,11 +21,11 @@
             <Container :classes="`flex flex-col gap-20`">
                 <Container :classes="`font-semibold text-[12px] lg:text-[14px] text-center`">
                     <span :class="`text-black font-normal`">Don't have an account? &nbsp;</span>
-                    <span :class="`font-semibold text-[#4CE895] `">Register Here</span>
+                    <span :class="`font-semibold text-[#4CE895]  cursor-pointer`">Register Here</span>
                 </Container>
                 <Container :classes="`text-center  text-[12px] lg:text-[16px] text-[#4CE895]`">
                     <span :class="`text-black font-normal`">By clicking on Login, you agree to our &nbsp;</span>
-                    <span :class="`font-semibold`">Terms & Conditions and Privacy Policy</span>
+                    <span :class="`font-semibold cursor-pointer`">Terms & Conditions and Privacy Policy</span>
                 </Container>
             </Container>
         </Container>
