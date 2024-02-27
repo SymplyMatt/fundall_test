@@ -1,5 +1,5 @@
 <template>
-    <Container :classes="`bg-[#FFFFFF] box-shadow_ rounded-5 w-full grid grid-cols-1 gap-5 p-20 h-full items-center justify-center`">
+    <Container :classes="`bg-[#FFFFFF] box-shadow_ rounded-5 w-full grid grid-cols-1 gap-5 p-20 phone-big:px-60 h-full items-center justify-center`">
         <Container :classes="`col-span-1 w-55  w-full flex flex-col justify-between h-full gap-10`">
             <Container :classes="`w-full flex flex-col gap-10`">
                 <Container :classes="`h-full w-full flex flex-col gap-20`">
