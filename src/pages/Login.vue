@@ -1,15 +1,22 @@
 <template>
-    <Page :classes="`page grid grid-cols-2 gap-4 items-center gap-[40px] phone-big:gap-30 justify-center relative`">
-        <Container :classes="`col-span-1 w-45 relative flex flex-col items-center justify-center h-full`">
-            <Container :classes="`absolute top-0 left-0`">
-                <Logo />
+    <Page :classes="`page box-shadow_ grid grid-cols-1 grid-rows-[90%,10%] items-center  justify-center h-full overflow-hidden`">
+        <Container :classes="`grid grid-cols-2 items-center justify-center px-20`">
+            <Container :classes="`col-span-1 w-45 relative flex flex-col items-center justify-center h-full`">
+                <Container :classes="`absolute top-10 left-0`">
+                    <Logo />
+                </Container>
+                <Container :classes="`flex items-center justify-center h-full`">
+                    <Hero />
+                </Container>
             </Container>
-            <Container :classes="`flex items-center justify-center`">
-                <Hero />
-            </Container>
+            <Form />
         </Container>
-        <Container :classes="`col-span-1 w-55`">
-
+        <Container :classes="`grid grid-cols-2 items-center justify-center`">
+            <Container :classes="``">
+            </Container>
+            <Text :text="`Terms & Conditions and Privacy Policy`" :classes="`font-semibold text-[12px] lg:text-[14px] text-[#4CE895] flex justify-center items-center nunito`">
+                <span :class="`text-black font-normal`">By clicking on Login, you agree to our &nbsp;</span>
+            </Text>
         </Container>
     </Page>
 </template>
@@ -19,5 +26,11 @@
     import Container from '@/components/common/Container.vue';
     import Logo from '@/components/common/Logo.vue';
     import Hero from '@/components/login/Hero.vue';
-    import HeroImageVue from '@/components/common/HeroImage.vue';
+    import Form from '@/components/login/Form.vue';
+    import Text from '@/components/common/Text.vue';
 </script>
+<style>
+    .nunito{
+        font-family: "Nunito Sans", sans-serif;
+    }
+</style>
