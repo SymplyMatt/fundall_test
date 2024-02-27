@@ -7,7 +7,11 @@ const routes = [
   {
     path: '/welcome', 
     name: 'welcome',
-    component: Welcome
+    component: Welcome,
+    beforeEnter: (to, from, next) => {
+      document.body.classList.add('h-screen');
+      next();
+    },
   },
   {
     path: '/login', 
@@ -29,6 +33,13 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes
+});
+
+router.beforeEach((to, from, next) => {
+  if (from.path === '/welcome') {
+    document.body.classList.remove('h-screen');
+  }
+  next();
 });
 
 export default router;

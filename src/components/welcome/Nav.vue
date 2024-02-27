@@ -14,7 +14,7 @@
     import Button from '../common/Button.vue'
     import Container from '../common/Container.vue'
 
-    const router = useRouter()
+    const router = useRouter();
 
     const goToLogin = () => {
         router.push('/login')

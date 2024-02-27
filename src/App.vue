@@ -25,22 +25,4 @@
     -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
   }
 
-  @media only screen and (max-width: 1000px) {
-        body {
-            height: 100%;
-        }
-    }
-
-  @media only screen and (max-width: 350px) {
-        body {
-          padding: 7px;
-        }
-    }
-
-    @media only screen and (min-width: 1000px) {
-        body {
-            height: 100vh;
-        }
-    }
-
 </style>

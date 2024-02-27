@@ -30,7 +30,7 @@
             </Container>
             <Container :classes="`font-semibold text-[12px] lg:text-[14px] text-center`">
                 <span :class="`text-black font-normal`">Already have an account? &nbsp;</span>
-                <span :class="`font-semibold text-[#4CE895]  cursor-pointer`">Login Here</span>
+                <span :class="`font-semibold text-[#4CE895]  cursor-pointer`" @click="goToLogin">Login Here</span>
             </Container>
             
         </Container>
@@ -42,4 +42,10 @@
     import Text from '../common/Text.vue'
     import Button from '../common/Button.vue'
     import Input from '../common/Input.vue';
+    import { useRouter } from 'vue-router'
+    const router = useRouter();
+
+    const goToLogin = () => {
+        router.push('/login')
+    }
 </script>
