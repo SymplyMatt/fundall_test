@@ -26,7 +26,7 @@
                         <Input :placeholder="`Confirm Password`"/>
                     </Container>
                 </Container>
-                <Button :text='`SIGN UP`' :classes="`flex justify-center items-center p-[8px] ex-sm-phone:p-10 bg-[#4CE895] h-[45px] font-bold`" />
+                <Button :text='`SIGN UP`' :classes="`flex justify-center items-center p-[8px] ex-sm-phone:p-10 bg-[#4CE895] h-[45px] font-bold`" :onClickFunction="goToDashboard" />
             </Container>
             <Container :classes="`font-semibold text-[12px] lg:text-[14px] text-center`">
                 <span :class="`text-black font-normal`">Already have an account? &nbsp;</span>
@@ -47,5 +47,8 @@
 
     const goToLogin = () => {
         router.push('/login')
+    }
+    const goToDashboard = () => {
+        router.push('/dashboard');
     }
 </script>

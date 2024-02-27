@@ -16,7 +16,7 @@
                         <Input :placeholder="`Enter Password`"/>
                     </Container>
                 </Container>
-                <Button :text='`LOGIN`' :classes="`flex justify-center items-center p-[8px] ex-sm-phone:p-10 bg-[#4CE895] h-[45px] font-bold`" />
+                <Button :text='`LOGIN`' :classes="`flex justify-center items-center p-[8px] ex-sm-phone:p-10 bg-[#4CE895] h-[45px] font-bold`"  :onClickFunction="goToDashboard" />
             </Container>
             <Container :classes="`flex flex-col gap-20`">
                 <Container :classes="`font-semibold text-[12px] lg:text-[14px] text-center`">
@@ -41,6 +41,9 @@
     const router = useRouter();
 
     const goToSignup = () => {
-        router.push('/signup')
+        router.push('/signup');
+    }
+    const goToDashboard = () => {
+        router.push('/dashboard');
     }
 </script>
