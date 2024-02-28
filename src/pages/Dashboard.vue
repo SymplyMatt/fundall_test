@@ -1,5 +1,5 @@
 <template>
-    <Page :classes="`page box-shadow_ flex flex-col bigtab:flex-row items-center justify-center h-full p-30 sm-tab:p-20 bigtab:p-20 gap-20 phone-big:gap-50 bigtab:gap-0 overflow-auto`">
+    <Page :classes="`page box-shadow_ flex flex-col bigtab:flex-row items-center justify-center h-full p-30 sm-tab:p-20 bigtab:p-20 gap-20 phone-big:gap-50 bigtab:gap-0`">
 
             
             <Container :classes="`col-span-1 w-45 relative flex flex-col justify-center  py-60 px-[20px] w-full big-tab:w-[90%]`">
@@ -10,8 +10,6 @@
                     <DashboardHero />
                 </Container>
             </Container>
-
-
             
             <DashboardForm />
     </Page>
