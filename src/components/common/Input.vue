@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-    import { defineProps, defineEmits } from 'vue';
+    import { defineProps, defineEmits, watch, ref } from 'vue';
 
     const props = defineProps({
         placeholder: { type: String, required: true },
@@ -15,10 +15,11 @@
     const emit = defineEmits(['updateModel']); // For v-model binding
 
     // Reactive variable to store input value
-    let inputValue = props.modelValue;
+    let inputValue = ref (props.modelValue);
 
     // Watch for changes in inputValue and emit update event
-    watch(() => inputValue, (newValue) => {
+    watch(() => inputValue.value, (newValue) => {
+        console.log('......');
         emit('updateModel', newValue);
     });
 </script>
