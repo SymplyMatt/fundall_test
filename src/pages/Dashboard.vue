@@ -1,16 +1,19 @@
 <template>
-    <Page :classes="`page box-shadow_ grid grid-cols-1 items-center justify-center h-full overflow-hidden p-30 sm-tab:p-40 bigtab:p-0 gap-20 phone-big:gap-50 bigtab:gap-0`">
-        <Container :classes="`grid grid-cols-1 bigtab:grid-cols-2 items-center justify-center phone:px-20  bigtab:gap-0`">
-            <Container :classes="`col-span-1 w-45 relative flex flex-col items-center justify-center h-full py-60 bigtab:py-0`">
-                <Container :classes="`absolute top-10 left-0`">
+    <Page :classes="`page box-shadow_ flex flex-col bigtab:flex-row items-center justify-center h-full p-30 sm-tab:p-20 bigtab:p-20 gap-20 phone-big:gap-50 bigtab:gap-0 overflow-auto`">
+
+            
+            <Container :classes="`col-span-1 w-45 relative flex flex-col justify-center  py-60 px-[20px] w-full big-tab:w-[90%]`">
+                <Container :classes="`absolute top-50 left-20 w-[60px]`">
                     <Logo />
                 </Container>
-                <Container :classes="`flex items-center justify-center h-full`">
-                    <DashbboardHero />
+                <Container :classes="`flex`">
+                    <DashboardHero />
                 </Container>
             </Container>
+
+
+            
             <DashboardForm />
-        </Container>
     </Page>
 </template>
 
@@ -19,7 +22,7 @@
     import Container from '@/components/common/Container.vue';
     import Logo from '@/components/common/Logo.vue';
     import DashboardForm from '@/components/dashboard/DashboardForm.vue';
-    import DashbboardHero from '@/components/auth/LoginHero.vue'
+    import DashboardHero from '@/components/dashboard/DashboardHero.vue';
 </script>
 <style>
     .nunito{

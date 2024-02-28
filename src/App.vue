@@ -18,6 +18,7 @@
     width: 100%;
     background: #FCFBFC;
     padding: 10px;
+    overflow: auto;
   }
   .box-shadow_ {
     box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
@@ -33,6 +34,7 @@
   @media only screen and (min-height: 1100px) {
         body {
             height: 100vh !important;
+            overflow: auto;
         }
     }
 
@@ -45,6 +47,7 @@
     @media only screen and (min-width: 1000px) {
         body {
             height: 100vh;
+            overflow: auto;
         }
     }
 

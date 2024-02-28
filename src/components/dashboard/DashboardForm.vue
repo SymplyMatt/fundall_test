@@ -1,7 +1,6 @@
 <template>
-    <Container :classes="`bg-[#F2F3F7] box-shadow_ rounded-5 w-full grid grid-cols-1 gap-20 p-20 h-full items-center justify-center`">
-        <Container :classes="`col-span-1 w-55  w-full flex flex-col justify-between h-full gap-30 bigtab:gap-10`">
-            <Container :classes="`w-full sm:flex m-auto items-center justify-between bg-[#FFFFFF] sm:h-[60px] p-20 rounded-10`">
+    <Container :classes="`col-span-1 w-55 bg-[#F2F3F7] box-shadow_ rounded-5 w-full flex flex-col  px-20 py-10 items-center justify-between gap-20 overflow-auto`">
+            <Container :classes="`w-full sm:flex  items-center justify-between bg-[#FFFFFF] sm:h-[60px] p-20 rounded-10 mt-20`">
                 <Container :classes="`flex flex-col  justify-center text-center sm:text-left`">
                     <Container :classes="`text-[18px] md:text-[20px] font-bold text-[#4CE895] gap-5`">
                         Welcome back, &nbsp;<span class="text-black">Babatunde</span>
@@ -66,11 +65,10 @@
                         </Container>
                     </Container>
                     <Container :classes="`inline-block flex justify-center items-center`">
-                        <Button :text="`SAVE TODAY'S EXPENSES`" :classes="`span-0 flex justify-center items-center w-contain bg-[#4CE895]  font-bold p-10 h-[40px] rounded-[15px] text-[10px] ex-sm-phone:text-[12px] sm:text-[14px] text-center`" :onClickFunction="goToDashboard" />
+                        <Button :text="`SAVE TODAY'S EXPENSES`" :classes="`span-0 flex justify-center items-center w-contain bg-[#4CE895]  font-bold p-10 h-[30px] rounded-[15px] text-[10px] ex-sm-phone:text-[12px] sm:text-[14px] text-center`" :onClickFunction="goToDashboard" />
                     </Container>
                 </Container>
             </Container>
-        </Container>
     </Container>
 </template>
 
@@ -89,3 +87,8 @@
         router.push('/dashboard');
     }
 </script>
+<style>
+    /* .h-min_content{
+        height: min-content !important;
+    } */
+</style>
