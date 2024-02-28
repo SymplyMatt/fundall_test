@@ -3,14 +3,14 @@
         <Container :classes="`flex items-center gap-20 py-10`">
             <Container :classes="`h-[40px] w-[40px] flex items-center justify-center p-20 bg-[#C4C4C4] rounded-5`"><i class="fa-solid fa-user"></i></Container>
             <Container :classes="`flex flex-col justify-center`">
-                <Container :classes="`text-14 font-bold`">Babatunde Fashola</Container>
-                <Container :classes="`text-12`">baba2@gmail.com</Container>
+                <Container :classes="`text-14 font-bold`">{{ userInfo.firstname || ''}} {{ userInfo.lastname || ''}}</Container>
+                <Container :classes="`text-12`">{{ userInfo.email || ''}}</Container>
             </Container>
         </Container>
         <Container :classes="`flex flex-col gap-10`">
             <Container :classes="`flex flex-col`">
                 <Container :classes="`text-[14px]`">Target Monthly Expenses</Container>
-                <Container :classes="`text-18 font-bold`">596,000</Container>
+                <Container :classes="`text-18 font-bold`">{{ userInfo.monthly_target || ''}}</Container>
             </Container>
             <Container :classes="`w-full bg-[#F2F3F7]`">
                 <Container :classes="`w-[30%] bg-[#4DE897] h-[7px]`"></Container>
@@ -85,4 +85,12 @@
     import Container from '../common/Container.vue'
     import Text from '../common/Text.vue'
     import HeroImage from '../common/HeroImage.vue'
+    import { defineProps } from 'vue';
+
+    const props = defineProps({
+        userInfo: {
+            type: Object,
+            default: {},
+        },
+    });
 </script>

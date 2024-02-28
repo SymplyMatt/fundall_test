@@ -7,7 +7,7 @@
                     <Logo />
                 </Container>
                 <Container :classes="`flex`">
-                    <DashboardHero />
+                    <DashboardHero :user-info="userInfo"/>
                 </Container>
             </Container>
             
@@ -21,6 +21,52 @@
     import Logo from '@/components/common/Logo.vue';
     import DashboardForm from '@/components/dashboard/DashboardForm.vue';
     import DashboardHero from '@/components/dashboard/DashboardHero.vue';
+    import { useRouter } from 'vue-router'
+    import sendRequest from '../config/fetchData'
+    import { ref, watch, computed, onMounted } from 'vue';
+    import { useStore } from 'vuex';
+
+    const router = useRouter();
+    const store = useStore();
+    const goToLogin = () => {
+        router.push('/login')
+    }
+    onMounted(() => {
+        const token = useStore().getters.getUser.user.access_token;
+        if (!token) {
+            goToLogin();
+        } else {
+            getData();
+        }
+    });
+    onMounted(() => {
+        const token = useStore().getters.getUser.user.access_token;
+        if(!token){
+            goToLogin();
+        }
+    });
+    onMounted(() => {
+        userInfo.value = useStore().getters.getUser.user
+    });
+    const userInfo= ref(useStore()?.getters?.getUser || {});
+    const getData = async () =>{
+            try {
+                const token = useStore().getters.getUser.user.access_token;
+                const monthly_target = useStore().getters.getUser.user.monthly_target;
+                const response = await sendRequest('get', '/api/v1/base/profile', {}, token);
+                if (response.status === 200) {
+                    const newUserData = response.data.success.data;
+                    newUserData.monthly_target = monthly_target;
+                    newUserData.access_token = token;
+                    userInfo.value = newUserData;
+                    console.log('new data: ',newUserData);
+                    store.dispatch('updateUser', newUserData);
+                } else {
+                }
+            } catch (error) {
+                console.error('An error occurred while fetching data', error);
+            }
+    }
 </script>
 <style>
     .nunito{

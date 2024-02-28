@@ -2,7 +2,11 @@ import { createStore } from 'vuex';
 
 const store = createStore({
   state: {
-    user: {},
+    user: {
+      user:{
+        access_token: ''
+      }
+    },
   },
   mutations: {
     updateUser(state, newUser) { 

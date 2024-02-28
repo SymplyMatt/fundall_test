@@ -18,7 +18,6 @@ export default async function sendRequest(method, endpoint, data = null, token =
       data,
       headers,
     });
-    console.log(response.data);
     return response;
   } catch (error) {
     console.error('Request error:', error);
