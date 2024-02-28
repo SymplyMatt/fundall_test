@@ -52,11 +52,11 @@
                                     <Input :placeholder="`Amount`"/>
                                 </Container>
                             </Container>
-                            <Container :classes="`w-full flex sm:grid sm:grid-cols-3 sp-tab:grid-cols-2 gap-5`">
+                            <Container :classes="`w-full flex sm:grid sm:grid-cols-3 sp-tab:grid-cols-3 gap-5`">
                                 <Container :classes="`flex gap-5 col-span-1`">
                                 </Container>
-                                <Container :classes="`flex gap-5 col-span-2 sp-tab:col-span-1 grid grid-cols-7 justify-center items-center`">
-                                    <Text :text="`Total Actual Expenses: `" :classes="`font-bold text-[12px] lg:text-[14px] col-span-4`"/>
+                                <Container :classes="`flex gap-5 col-span-2 sp-tab:col-span-2 grid grid-cols-7 items-center`">
+                                    <Text :text="`Total Actual Expenses: `" :classes="`text-right font-bold text-[12px] lg:text-[14px] col-span-4`"/>
                                     <Container :classes="`flex gap-5 col-span-3 justify-center items-center`">
                                         <Text :text="`#`" :classes="`font-bold text-[20px]col-span-4`"/>
                                         <Input :placeholder="`0.00`"/>
