@@ -9,11 +9,11 @@
                 <Container :classes="`h-full w-full flex flex-col gap-20`">
                     <Container :classes="`w-full flex flex-col gap-5`">
                         <Text :text="`Email address`" :classes="`font-semibold text-[12px] lg:text-[14px]`"/>
-                        <Input :placeholder="`Enter Email`"/>
+                        <Input :placeholder="`Enter Email`" :modelValue="email"/>
                     </Container>
                     <Container :classes="`w-full flex flex-col gap-5`">
                         <Text :text="`Password`" :classes="`font-semibold text-[12px] lg:text-[14px]`"/>
-                        <Input :placeholder="`Enter Password`"/>
+                        <Input :placeholder="`Enter Password`" :modelValue="password" type="password"/>
                     </Container>
                 </Container>
                 <Button :text='`LOGIN`' :classes="`flex justify-center items-center p-[8px] ex-sm-phone:p-10 bg-[#4CE895] h-[45px] font-bold`"  :onClickFunction="goToDashboard" />
@@ -33,6 +33,7 @@
 </template>
 
 <script setup>
+    import { ref, watch } from 'vue';
     import Container from '../common/Container.vue'
     import Text from '../common/Text.vue'
     import Button from '../common/Button.vue'
@@ -46,4 +47,11 @@
     const goToDashboard = () => {
         router.push('/dashboard');
     }
+
+    const email = ref('');
+    const password = ref('');
+
+    watch(() => email.value, (email) => {
+       console.log('email: ',email);
+    });
 </script>
