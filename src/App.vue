@@ -30,6 +30,11 @@
             height: 100%;
         }
     }
+  @media only screen and (min-height: 1100px) {
+        body {
+            height: 100vh !important;
+        }
+    }
 
   @media only screen and (max-width: 350px) {
         body {

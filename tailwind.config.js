@@ -13,6 +13,7 @@ module.exports = {
         "phone-big": "600px",
         sm: "640px",
         "sm-tab": "700px",
+        "sp-tab": "800px",
         "bigtab": "1000px",
         md: "1200px",
         mm: "900px",
