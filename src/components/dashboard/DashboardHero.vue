@@ -85,7 +85,7 @@
     import Container from '../common/Container.vue'
     import Text from '../common/Text.vue'
     import HeroImage from '../common/HeroImage.vue'
-    import { defineProps } from 'vue';
+    import { defineProps, computed } from 'vue';
 
     const props = defineProps({
         userInfo: {
@@ -93,4 +93,5 @@
             default: {},
         },
     });
+
 </script>

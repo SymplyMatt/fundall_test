@@ -73,7 +73,6 @@
             const response = await sendRequest('post', '/api/v1/login', values.value);
             if (response.status === 200) {
                 loading.value = false;
-                console.log('Monthly target: ', response.data.success);
                 store.dispatch('updateUser', response.data.success);
                 goToDashboard();
             } else {
