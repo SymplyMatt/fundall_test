@@ -1,9 +1,8 @@
-const axios = require('axios');
+import axios from 'axios';
 
 export default async function sendRequest(method, endpoint, data = null, token = null) {
-  const baseURL = 'https://gjcrecycling-f7fa9435192b.herokuapp.com/woven/test'; 
+  const baseURL = 'https://expense-api.fundall.io'; 
   const url = `${baseURL}${endpoint}`;
-
   const headers = {
     'Content-Type': 'application/json',
   };
