@@ -9,11 +9,11 @@
                 <Container :classes="`h-full w-full flex flex-col gap-20`">
                     <Container :classes="`w-full flex flex-col gap-5`">
                         <Text :text="`Email address`" :classes="`font-semibold text-[12px] lg:text-[14px]`"/>
-                        <Input :placeholder="`Enter Email`" :modelValue="email"/>
+                        <Input :placeholder="`Enter Email`" :modelValue="email" @updateModel="updateModell"/>
                     </Container>
                     <Container :classes="`w-full flex flex-col gap-5`">
                         <Text :text="`Password`" :classes="`font-semibold text-[12px] lg:text-[14px]`"/>
-                        <Input :placeholder="`Enter Password`" :modelValue="password" type="password"/>
+                        <Input :placeholder="`Enter Password`" :modelValue="password" type="password"  @updateModel="updateModell"/>
                     </Container>
                 </Container>
                 <Button :text='`LOGIN`' :classes="`flex justify-center items-center p-[8px] ex-sm-phone:p-10 bg-[#4CE895] h-[45px] font-bold`"  :onClickFunction="goToDashboard" />
@@ -50,7 +50,9 @@
 
     const email = ref('');
     const password = ref('');
-
+    const updateModell = (val) =>{
+        email.value = val
+    }
     watch(() => email.value, (email) => {
        console.log('email: ',email);
     });
