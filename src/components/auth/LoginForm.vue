@@ -8,15 +8,15 @@
             <Container :classes="`w-full flex flex-col gap-10`">
                 <Container :classes="`h-full w-full flex flex-col gap-20`">
                     <Container :classes="`w-full flex flex-col gap-5`">
-                        <Text :text="`Email address`" :classes="`font-semibold text-[12px] lg:text-[14px]`"/>
-                        <Input :placeholder="`Enter Email`" :modelValue="`email`" @updateModel="updateModell"/>
+                        <Text :text="`Email or Username`" :classes="`font-semibold text-[12px] lg:text-[14px]`"/>
+                        <Input :placeholder="`Enter Email`" :modelValue="`email`" @updateModel="update_model"/>
                     </Container>
                     <Container :classes="`w-full flex flex-col gap-5`">
                         <Text :text="`Password`" :classes="`font-semibold text-[12px] lg:text-[14px]`"/>
-                        <Input :placeholder="`Enter Password`" :modelValue="`password`" type="password"  @updateModel="updateModell"/>
+                        <Input :placeholder="`Enter Password`" :modelValue="`password`" type="password"  @updateModel="update_model"/>
                     </Container>
                 </Container>
-                <Button :text='`LOGIN`' :classes="`flex justify-center items-center p-[8px] ex-sm-phone:p-10 bg-[#4CE895] h-[45px] font-bold`"  :onClickFunction="goToDashboard" />
+                <Button :text='`LOGIN`' :classes="`flex justify-center items-center p-[8px] ex-sm-phone:p-10 bg-[#4CE895] h-[45px] font-bold`"  :onClickFunction="goToDashboard" :active="areInputsValid"/>
             </Container>
             <Container :classes="`flex flex-col gap-20`">
                 <Container :classes="`font-semibold text-[12px] lg:text-[14px] text-center`">
@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-    import { ref, watch } from 'vue';
+    import { ref, watch, computed } from 'vue';
     import Container from '../common/Container.vue'
     import Text from '../common/Text.vue'
     import Button from '../common/Button.vue'
@@ -48,16 +48,19 @@
         router.push('/dashboard');
     }
 
-    const values = ref({});
+    const values = ref({
+        email : '',
+        password : ''
+    });
 
-    const updateModell = (newValue) =>{
+    const update_model = (newValue) =>{
         const {key, value} = newValue
-        console.log(newValue.key);
-        console.log(newValue.value);
         values.value = {...values.value, [key]: value}
     }
-
-    watch(() => values.value, (email) => {
-       console.log('values: ',email);
+    const areInputsValid = computed(() => {
+        const isValid = Boolean(values.value.email && values.value.password) ||  false;
+        console.log(isValid);
+        return isValid;
     });
+
 </script>
