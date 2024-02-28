@@ -45,9 +45,11 @@
     import { useRouter } from 'vue-router'
     import sendRequest from '../../config/fetchData.js'
     import { ref, watch, computed } from 'vue';
+    import { useStore } from 'vuex';
+
 
     const router = useRouter();
-
+    const store = useStore();
     const goToLogin = () => {
         router.push('/login')
     }
@@ -76,15 +78,29 @@
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
-    
+    const loginUser = async () =>{
+        try {
+        const response = await sendRequest('post', '/api/v1/login', values.value);
+        if (response.status === 200) {
+            loading.value = false;
+            console.log(response.data.success);
+            store.dispatch('updateUser', response.data.success);
+            goToDashboard();
+        } else {
+            loading.value = false; 
+        }
+        } catch (error) {
+            console.error('An error occurred while fetching data', error);
+            loading.value = false;
+        }
+    }
     const authUser = async () =>{
         if(areInputsValid.value){
             try {
             loading.value = true;
             const response = await sendRequest('post', '/api/v1/register', values.value);
             if (response.status === 200) {
-              loading.value = false;
-              goToDashboard();
+              loginUser();
             } else {
               loading.value = false; 
             }

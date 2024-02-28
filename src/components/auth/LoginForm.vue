@@ -40,8 +40,10 @@
     import Input from '../common/Input.vue';
     import { useRouter } from 'vue-router'
     import sendRequest from '../../config/fetchData.js'
+    import { useStore } from 'vuex';
 
     const router = useRouter();
+    const store = useStore();
 
     const goToSignup = () => {
         router.push('/signup');
@@ -70,8 +72,9 @@
             loading.value = true;
             const response = await sendRequest('post', '/api/v1/login', values.value);
             if (response.status === 200) {
-              loading.value = false;
-              goToDashboard();
+                loading.value = false;
+                store.dispatch('updateUser', response.data.success);
+                goToDashboard();
             } else {
               loading.value = false; 
             }
