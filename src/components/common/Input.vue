@@ -9,17 +9,14 @@
         placeholder: { type: String, required: true },
         extraclass: { type: String, default: '' },
         type: { type: String, default: 'text' },
-        modelValue: { type: String } // For v-model binding
+        modelValue: { type: String }
     });
 
-    const emit = defineEmits(['updateModel']); // For v-model binding
+    const emit = defineEmits(['updateModel']);
 
-    // Reactive variable to store input value
-    let inputValue = ref (props.modelValue);
+    let inputValue = ref ('');
 
-    // Watch for changes in inputValue and emit update event
     watch(() => inputValue.value, (newValue) => {
-        console.log('......');
-        emit('updateModel', newValue);
+        emit('updateModel', { key: props.modelValue, value: newValue });
     });
 </script>
